@@ -90,7 +90,7 @@ GruntStaticSiteGenerator.prototype.app = function app() {
   
   this.copy('_app.js', 'app.js');
   this.copy('_style.css', 'style.css');
-  this.copy('_index.html', 'index.html');
+  this.copy('_index.ejs', 'index.ejs');
   this.copy('_readme.md', 'readme.md');
 
   if (this.ghpages === true){

@@ -6,13 +6,10 @@ module.exports = function(grunt) {
     ejs: {
       all: {
         options: {
-          bodyid: function(filename) {
-            return require('path').basename(filename, '.ejs');
-          },
+          // site-wide vars here
         },
         src: ['**/*.ejs', '!partials/**/*'],
         dest: 'dist/',
-        cwd: 'app/',
         expand: true,
         ext: '.html',
       },
@@ -20,7 +17,7 @@ module.exports = function(grunt) {
 
     copy: {
       all: {
-        src: ['index.html', 'assets/**/*'],
+        src: ['assets/**/*'],
         dest: 'dist/',
       },
     },
@@ -57,7 +54,7 @@ module.exports = function(grunt) {
       },
 
       assets: {
-        files: ['index.html', 'assets/**/*'],
+        files: ['assets/**/*'],
         tasks: ['copy'],
       }
     },

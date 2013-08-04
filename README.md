@@ -1,5 +1,4 @@
 # Generator-grunt-static-site
-[![Build Status](https://secure.travis-ci.org/sethvincent/generator-grunt-static-site.png?branch=master)](https://travis-ci.org/sethvincent/generator-grunt-static-site)
 
 A generator for Yeoman.
 

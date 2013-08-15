@@ -45,7 +45,7 @@ GruntStaticSiteGenerator.prototype.askFor = function askFor() {
   {
     name: 'projectDescription',
     message: 'Describe your project:',
-    default: 'A generator for Yeoman'
+    default: 'My awesome site.'
   },
 
   {

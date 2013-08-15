@@ -30,6 +30,7 @@
     "grunt-contrib-watch": "~0.4.4",
     "grunt-browserify": "~1.2.0",
     "grunt-gh-pages": "~0.6.0",
-    "grunt-ejs": "~0.1.0"
+    "grunt-ejs": "~0.1.0",
+    "debowerify": "~0.1.3"
   }
 }

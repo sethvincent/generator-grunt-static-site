@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     
-    clean: ['dist/'],
+    clean: ['dist'],
 
     ejs: {
       all: {
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 
     copy: {
       all: {
-        src: ['*.css', '*.js', '*.html', '!Gruntfile.js'],
+        src: ['*.css', '*.html', '!Gruntfile.js'],
         dest: 'dist/',
       },
     },
@@ -27,6 +27,9 @@ module.exports = function(grunt) {
         src: 'app.js',
         dest: 'dist/app.js'
       },
+      options: {
+        transform: ['debowerify']
+      }
     },
 
     connect: {

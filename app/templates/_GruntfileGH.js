@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         options: {
           // site-wide vars here
         },
-        src: ['**/*.ejs', '!node_modules/**/*'],
+        src: ['**/*.ejs', '!node_modules/**/*', '!templates/**/*'],
         dest: 'dist/',
         expand: true,
         ext: '.html',

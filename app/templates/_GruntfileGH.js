@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         options: {
           // site-wide vars here
         },
-        src: ['**/*.ejs', '!partials/**/*'],
+        src: ['**/*.ejs', '!node_modules/**/*'],
         dest: 'dist/',
         expand: true,
         ext: '.html',
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
   
   grunt.registerTask('default', ['clean', 'ejs', 'browserify', 'copy']);
   
-  grunt.registerTask('dev', ['default', 'connect', 'watch']);
+  grunt.registerTask('server', ['default', 'connect', 'watch']);
 
   grunt.registerTask('deploy', ['default', 'gh-pages']);
 };

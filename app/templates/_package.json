@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "<%= projectDescription %>",
   "scripts": {
-    "start": "grunt dev",
+    "start": "grunt server",
     "ghpages": "grunt ghpages"
   },
   "homepage": "http://github.com/<%= githubUser %>/<%= _.slugify(projectName) %>",

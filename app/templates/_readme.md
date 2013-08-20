@@ -1,7 +1,6 @@
 # <%= projectName %>
 > <%= projectDescription %>
 
-<% if (ghpages === true) { %>
 ## grunt-static-site usage:
 Initialize the git repository for the project:
 ```
@@ -24,5 +23,3 @@ Deploy to GitHub Pages:
 ```
 grunt deploy
 ```
-
-<% } %>

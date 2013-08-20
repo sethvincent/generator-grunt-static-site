@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     
-    clean: ['dist/'],
+    clean: ['dist'],
 
     ejs: {
       all: {
@@ -47,19 +47,26 @@ module.exports = function(grunt) {
       },
 
       html: {
-        files: '<%= ejs.all.src %>',
+        files: '<%%= ejs.all.src %>',
         tasks: ['ejs'],
       },
 
       js: {
-        files: '<%= browserify.all.src %>',
+        files: '<%%= browserify.all.src %>',
         tasks: ['browserify'],
       },
 
       assets: {
-        files: ['index.ejs', 'assets/**/*'],
+        files: ['assets/**/*'],
         tasks: ['copy'],
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'dist/'
+      },
+      src: ['**/*']
     }
   });
 
@@ -68,4 +75,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['clean', 'ejs', 'browserify', 'copy']);
   
   grunt.registerTask('server', ['default', 'connect', 'watch']);
+
+  grunt.registerTask('deploy', ['default', 'gh-pages']);
+
 };

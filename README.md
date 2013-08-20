@@ -1,6 +1,6 @@
 # Generator-grunt-static-site
 
-A generator for Yeoman.
+A Yeoman generator for creating static sites that use grunt, browserify, ejs, and deploy to GitHub Pages.
 
 ## Getting started
 - Make sure you have [yo](https://github.com/yeoman/yo) installed:

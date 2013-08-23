@@ -76,7 +76,7 @@ GruntStaticSiteGenerator.prototype.userInfo = function userInfo() {
 };
 
 GruntStaticSiteGenerator.prototype.app = function app() {
-  this.mkdir('templates');
+  this.mkdir('_templates');
 
   this.template('_bower.json', 'bower.json');
   this.template('_app.js', 'app.js');

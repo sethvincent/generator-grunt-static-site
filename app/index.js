@@ -77,10 +77,11 @@ GruntStaticSiteGenerator.prototype.userInfo = function userInfo() {
 
 GruntStaticSiteGenerator.prototype.app = function app() {
   this.mkdir('_templates');
+  this.mkdir('src');
 
   this.template('_bower.json', 'bower.json');
-  this.template('_app.js', 'app.js');
-  this.template('_style.css', 'style.css');
+  this.template('_app.js', 'src/app.js');
+  this.template('_style.less', 'styles/style.less');
   this.template('_index.ejs', 'index.ejs');
   this.template('_readme.md', 'readme.md');
   this.template('_Gruntfile.js', 'Gruntfile.js');
@@ -88,5 +89,6 @@ GruntStaticSiteGenerator.prototype.app = function app() {
 };
 
 GruntStaticSiteGenerator.prototype.projectfiles = function projectfiles() {
+  this.copy('_gitignore', '.gitignore');
   //this.copy('jshintrc', '.jshintrc');
 };

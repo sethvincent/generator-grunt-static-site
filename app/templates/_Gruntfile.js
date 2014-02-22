@@ -24,11 +24,18 @@ module.exports = function(grunt) {
 
     browserify: {
       all: {
-        src: 'app.js',
+        src: 'src/**/*.js',
         dest: 'dist/app.js'
       },
       options: {
         transform: ['debowerify']
+      }
+    },
+
+    less: {
+      all: {
+        src: 'styles/**/*.less',
+        dest: 'dist/style.css'
       }
     },
 
@@ -56,6 +63,11 @@ module.exports = function(grunt) {
         tasks: ['browserify'],
       },
 
+      less: {
+        files: '<%%= less.all.src %>',
+        tasks: ['less']
+      },
+
       assets: {
         files: ['assets/**/*', '*.css', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
         tasks: ['copy'],
@@ -72,7 +84,7 @@ module.exports = function(grunt) {
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   
-  grunt.registerTask('default', ['clean', 'ejs', 'browserify', 'copy']);
+  grunt.registerTask('default', ['clean', 'ejs', 'less', 'browserify', 'copy']);
   
   grunt.registerTask('server', ['default', 'connect', 'watch']);
 
